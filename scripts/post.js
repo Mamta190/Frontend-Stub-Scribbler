@@ -1,17 +1,17 @@
-var queryStr = new Array(); 
+var str = new Array(); 
 window.onload = function () {
-    if (queryStr.length == 0) {
+    if (str.length == 0) {
         if (window.location.search.split('?').length > 1) {
             var params = window.location.search.split('?')[1].split('&');
             for (var i = 0; i < params.length; i++) {
-                queryStr[params[i].split('=')[0]] = decodeURIComponent(params[i].split('=')[1]);
+                str[params[i].split('=')[0]] = decodeURIComponent(params[i].split('=')[1]);
             }
         }
     }
-    if (queryStr["heading"] != null && queryStr["author"] != null) {
-        document.getElementsByClassName("heading-content")[0].innerHTML = queryStr["heading"];
-        document.getElementsByClassName("author-name")[0].innerHTML = queryStr["author"];
-        document.getElementsByClassName("post-content")[0].innerHTML = queryStr["content"];
+    if (str["heading"] != null && str["author"] != null) {
+        document.getElementsByClassName("heading-content")[0].innerHTML = str["heading"];
+        document.getElementsByClassName("author-name")[0].innerHTML = str["author"];
+        document.getElementsByClassName("post-content")[0].innerHTML = str["content"];
     }
     document.getElementById('comments').style.visibility = 'hidden';
 };
