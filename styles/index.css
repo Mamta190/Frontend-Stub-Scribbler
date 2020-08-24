@@ -1,0 +1,52 @@
+html {
+    height: 100%;
+}
+#main-page {
+    background-image: url(../images/background.jpg);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% cover !important;
+    overflow: hidden;
+}
+#container-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0.9;
+}
+.modal{
+    padding-top: 100px;
+}
+#createbtn{
+    display: flex; 
+    justify-content: center;
+}
+#createpost{
+    background-color: green;
+    color: white;
+    padding-top: 8px;
+    padding-right: 20px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+}
+textarea{
+    size: 100px;
+}
+#contents{
+    height: 40%;
+}
+@media screen and (max-height:450px){
+    .btn-warning{
+     overflow-y: auto;
+    }
+    .btn-warning a{
+        font-size: 20px;
+    }
+    .btn-warning.createbtn{
+        font-size: 40px;
+        top: 10px;
+        right: 25px;
+    }
+}
